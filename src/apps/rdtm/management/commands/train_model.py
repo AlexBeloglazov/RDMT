@@ -8,6 +8,10 @@ class Command(BaseCommand):
         from rdtm.tasks import train_and_update_db
 
         self.stdout.write(self.style.SUCCESS('Training in progress...'))
-        accuracy = train_and_update_db()
+
+        train, test, accuracy = train_and_update_db()
         self.stdout.write(self.style.SUCCESS('Training completed!'))
-        self.stdout.write(self.style.SUCCESS('Accuracy: %.2f%%' % accuracy))
+
+        self.stdout.write(' Training dataset: %d' % train)
+        self.stdout.write(' Testing dataset: %d' % test)
+        self.stdout.write(self.style.SUCCESS(' Accuracy: %.2f%%' % (accuracy * 100)))

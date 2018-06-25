@@ -10,6 +10,7 @@ SRC_DIR = os.path.dirname(
 
 BASE_DIR = os.path.dirname(SRC_DIR)
 
+DATASET_DIR = os.path.join(SRC_DIR, 'dataset')
 
 
 SECRET_KEY = '_+hm2j1@&g(r)t35j@#lic!^1=x1uf=_+6uii4^_1s&!xdil0d'

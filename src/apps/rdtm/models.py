@@ -1,15 +1,15 @@
 from django.db import models
 
 
-class HyperParamters(models.Model):
+class Classifier(models.Model):
     """
-    Model stores hyper parameters of the classificator
+    Model pickled classifier
     """
 
     classes = {
-        'ClassA': 0,
-        'ClassB': 1,
-        'ClassC': 2,
+        'ClassA': ('', 0),
+        'ClassB': ('', 1),
+        'ClassC': ('', 2),
     }
 
-    parameters = models.TextField()
+    classifier = models.BinaryField()
