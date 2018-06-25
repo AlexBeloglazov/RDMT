@@ -11,8 +11,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import View
 
 from api.mixins import JSONDecodeMixin, JSONResponseMixin
-from rdtm.models import Classifier
-from rdtm.tasks import _get_dataset_meta, train_and_update_db
+from rdmt.models import Classifier
+from rdmt.tasks import _get_dataset_meta, train_and_update_db
 
 
 @method_decorator(csrf_exempt, name='dispatch')

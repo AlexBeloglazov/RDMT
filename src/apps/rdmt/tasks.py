@@ -12,7 +12,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 
 from django.conf import settings
-from rdtm.models import Classifier
+from rdmt.models import Classifier
 
 
 def _get_dataset_meta():

@@ -1,7 +1,7 @@
 from django.urls import re_path
 from django.conf.urls import include
 
-from rdtm.views import IndexView
+from rdmt.views import IndexView
 
 urlpatterns = [
     re_path(r'^$', IndexView.as_view()),

@@ -4,7 +4,7 @@ import sys
 from os.path import abspath, dirname, join
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "rdtm.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "rdmt.settings")
     PROJECT_ROOT = abspath(dirname(__file__))
     apps_dir = join(PROJECT_ROOT, 'src', 'apps')
     if apps_dir not in sys.path:

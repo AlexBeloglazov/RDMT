@@ -1,5 +1,5 @@
 """
-Django settings for rdtm project.
+Django settings for rdmt project.
 """
 
 import os
@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
 
-    'rdtm.apps.RdtmConfig',
+    'rdmt.apps.RdmtConfig',
     'dashboard.apps.DashboardConfig',
     'api.apps.ApiConfig',
 ]
@@ -42,7 +42,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'rdtm.urls'
+ROOT_URLCONF = 'rdmt.urls'
 
 TEMPLATES = [
     {
@@ -60,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'rdtm.wsgi.application'
+WSGI_APPLICATION = 'rdmt.wsgi.application'
 
 
 
