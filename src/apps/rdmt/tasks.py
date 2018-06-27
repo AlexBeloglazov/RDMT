@@ -35,7 +35,7 @@ def _get_dataset():
 
     for class_name, class_meta in Classifier.classes.items():
         for file_ in glob.glob(path.join(dataset_dir, class_name, '*')):
-            with open(file_, 'r') as stream:
+            with open(file_, 'r', errors='ignore') as stream:
                 data.append(stream.read())
             labels.append(class_meta[1])
             class_names.append(class_name)
