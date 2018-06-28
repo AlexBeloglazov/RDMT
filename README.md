@@ -74,11 +74,11 @@ HTML templates are available in the directory `/src/templates/dashboard`
 	"files": [
         {
             "name": "filename1.txt",
-            "text": "Text of a document"
+            "text": "Document from a regulator"
         },
         {
             "name": "filename2.txt",
-            "text": "Document from a regulator"
+            "text": "Text of a document"
         }
     ]
 }
