@@ -3,9 +3,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Upload documents to classify</title>
+    <title>Word Cloud Generator</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/d3.min.js"></script>
+    <script src="/static/d3.layout.cloud.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="https://unpkg.com/ag-grid@18.0.1/dist/ag-grid.min.js"></script>
+    <style>
+        .cell-wrap-text {
+    white-space: normal !important;
+}
+        #droparea {
+            border: 4px dashed lightgray;
+            border-radius: 30px;
+            color: gray;
+            font-weight: 700;
+            font-size: 20;
+            height: 100px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin: 30px 0px 30px 0px;
+        }
+        #droparea.highlight {
+            border-color: dimgrey;
+        }
+        .cloud {
+            margin: 30px 0px 30px 0px
+        }
+        .cloud svg {
+            margin: 10px 0px 0px 0px;
+        }
+        .cloud .info {
+            font-size: 11px;
+        }
+        /* spinner is taken from https://stephanwagner.me/only-css-loading-spinner */
+        @keyframes spinner {
+            to {transform: rotate(360deg);}
+        }
+        .spinner:before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            margin-left: -20px;
+            border-radius: 50%;
+            border: 4px solid #ccc;
+            border-top-color: #333;
+            animation: spinner .6s linear infinite;
+        }
+    </style>
 </head>
-<body>
-    <h2>Drop the documents you want to classify below:</h2>
+<body ng-app="example" ng-controller="exampleCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-info text-center">
+                    <h1 class="font-weight-light">RDTM</h1>
+                    <h3 class="font-weight-light">Document classification</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div ag-grid="gridOptions" class="ag-theme-balham" style="height: 100%;"></div>
+        
+        <div id="droprow" class="row justify-content-md-center">
+            <div id="droparea" class="col col-md-3">
+                Drag data files here
+            </div>
+        </div>
+        
+
+    </div>
+    <script src="/static/main.js"></script>
+    <script>
+        
+    </script>
 </body>
 </html>
