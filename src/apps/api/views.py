@@ -119,8 +119,8 @@ class Resolve(JSONDecodeMixin, JSONResponseMixin, View):
         with open(fname, 'w') as f:
             f.write(document.content)
 
-        # *_, accuracy = train_and_update_db()
         accuracy = Classifier.objects.first().accuracy
+        # *_, accuracy = train_and_update_db()
 
         document.delete()
 
