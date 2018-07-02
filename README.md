@@ -20,7 +20,9 @@ HTML templates are available in the directory `/src/templates/dashboard`
 ### View routes
 
 `/dashboard` - main page to upload documents for classification
+
 `/dashboard/stats` - page to show some info about the dataset and classifier's accuracy
+
 `/dashboard/resolve/{id}` - document resolution page
 
 ### API routes
